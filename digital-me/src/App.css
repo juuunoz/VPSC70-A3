@@ -1,0 +1,31 @@
+.response-box {
+  min-height: 100px;
+  outline: solid black 1px
+}
+
+.user-message {
+  max-width: 150px;
+  text-align: right;
+  padding: 5px;
+  overflow-wrap: break-word;
+
+  margin: 0 0 0 auto;
+}
+
+.me-message {
+  max-width: 150px;
+  text-align: left;
+  padding: 5px;
+  overflow-wrap: break-word;
+  
+}
+
+.wrapper {
+  width: 40%;
+  min-width: 200px;
+  margin: 10px auto;
+}
+
+.ask-question {
+  margin: 1%;
+}
