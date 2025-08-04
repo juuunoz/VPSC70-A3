@@ -20,8 +20,9 @@ run `node server.js` and wait for the packages to finish installing. The initial
 ### step 7:
 access the server on http://localhost:3000/
 
-### credits
+# credits
 paper on training image classification model from scratch: https://keras.io/examples/vision/image_classification_from_scratch/ \
 selfie image detection dataset: https://www.kaggle.com/datasets/jigrubhatt/selfieimagedetectiondataset
+
 
 
