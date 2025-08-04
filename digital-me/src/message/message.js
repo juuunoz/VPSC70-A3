@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef} from 'react';
 
-export function Message({phrase, isUser}) {
+export function Message({phrase, isUser, onFinish}) {
     
   const [currentResponse, setCurrentResponse] =  useState(" ");
   const remainingResponse = useRef("");
@@ -18,10 +18,18 @@ export function Message({phrase, isUser}) {
 
         remainingResponse.current = phrase;
         setCurrentResponse("");
-    }, phrase);
+    }, [phrase]);
 
     useEffect(() => {
-        if (remainingResponse.current.length === 0) return;
+        if (remainingResponse.current.length === 0) {
+            const timer = setTimeout(() => {
+                 onFinish()
+                return
+            }, 1000)
+
+            return () => clearTimeout(timer)
+           
+        }
 
         const timer = setTimeout(() => {
             const nextChar = remainingResponse.current.substring(0, 1);
